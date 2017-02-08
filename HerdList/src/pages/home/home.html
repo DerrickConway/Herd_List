@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Herd List
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addSong()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Herd List</h2>
+  <ion-list>
+    <ion-item *ngFor="let herd of herds | async">
+      {{herd.tagNumber}}
+      {{herd.numberOfCalfs}}
+    </ion-item>
+  </ion-list>
+</ion-content>
