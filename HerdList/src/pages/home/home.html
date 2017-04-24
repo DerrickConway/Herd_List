@@ -14,25 +14,9 @@
 <ion-content padding>
   <h2>Herd List</h2>
   <ion-list>
-    <ion-item-sliding *ngFor="let herd of herds | async">
-      <ion-item>
-        <p>Tag Number: {{herd.tagNumber}}</p>
-        <p>Number Of Calves: {{herd.numberOfCalves}}</p>
-        <p>Date Of Birth: {{herd.dob}}</p>
-        <p>Breed: {{herd.breeds}}</p>
-        <p>Complications: {{herd.comp}}</p>
-      </ion-item>
-
-      <ion-item-options side="right">
-        <button ion-button color="secondary" (click)="editHerd(herd)">
-          <ion-icon name="md-create"> Edit</ion-icon>
-        </button>
-      </ion-item-options>
-      <ion-item-options side="left">
-        <button ion-button color="danger" (click)="deleteHerd(herd.$key)">
-          <ion-icon name="md-trash"> Delete</ion-icon>
-        </button>
-      </ion-item-options>
-    </ion-item-sliding>
+    <ion-item *ngFor="let herd of herds | async">
+      <p>Tag Number: {{herd.tagNumber}}</p>
+      <p>Number Of Calfs: {{herd.numberOfCalfs}}</p>
+    </ion-item>
   </ion-list>
 </ion-content>
